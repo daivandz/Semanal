@@ -1,0 +1,18 @@
+﻿body {
+    background-color: darkmagenta;
+}
+
+.imagenes {
+    height: 400px;
+    width: 100%;
+}
+
+.space {
+    padding-top: 50px;
+    color: aliceblue;
+}
+
+.tabla {
+    padding: 50px;
+    margin-top: 50px;
+}

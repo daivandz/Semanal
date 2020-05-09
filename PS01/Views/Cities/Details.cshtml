@@ -1,0 +1,42 @@
+﻿@model PS01.Models.City
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+    <div class="masthead tabla">
+        <div class="masthead-content">
+            <div class="container text-white">
+                <h2 class="text-white-50">Detalles</h2>
+
+                <div>
+                    <h4>City</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Ciudad
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+
+                        <dt>
+                            Estado
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.State)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = "btn btn-default btn-info" }) |
+                    @Html.ActionLink("Cancelar", "Index", new { area = "" }, new { @class = "btn btn-default btn-danger" })
+                </p>
+            </div>
+        </div>
+    </div>
+
+                

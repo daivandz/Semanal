@@ -1,0 +1,58 @@
+﻿@model PS01.Models.Evento
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+    <div class="masthead tabla">
+        <div class="masthead-content">
+            <div class="container text-white">
+                <h2 class="text-white-50">Detalles</h2>
+
+                <div>
+                    <h4>Evento</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+
+                        <dt>
+                            Evento
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Title)
+                        </dd>
+
+                        <dt>
+                            Fecha
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Date)
+                        </dd>
+
+                        <dt>
+                            Lugar
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Place)
+                        </dd>
+
+                        <dt>
+                            Ciudad
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.City.Name)
+                        </dd>
+                    </dl>
+                </div>
+                <p>
+                    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = "btn btn-default btn-info" }) |
+                    @Html.ActionLink("Cancelar", "Index", new { area = "" }, new { @class = "btn btn-default btn-danger" })
+                </p>
+            </div>
+        </div>
+    </div>
+
+                

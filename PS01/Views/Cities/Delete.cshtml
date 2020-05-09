@@ -1,0 +1,49 @@
+﻿@model PS01.Models.City
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+    <div class="masthead tabla">
+        <div class="masthead-content">
+            <div class="container text-white">
+                <h2 class="text-white-50">Eliminar</h2>
+
+                <h3>Seguro que quieres eliminarlo?</h3>
+                <div>
+                    <h4>City</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Ciudad
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+
+                        <dt>
+                            Estado
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.State)
+                        </dd>
+
+                    </dl>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+                            @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-default btn-success" })
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+                
